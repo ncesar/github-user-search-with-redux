@@ -7,8 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeName } from 'redux/username';
 import { useHistory } from 'react-router-dom';
 import { RootState } from 'redux/store';
+import type { TopbarProps } from './types';
 
-export const Topbar: React.FC<any> = ({ onSubmit }) => {
+export const Topbar: React.FC<TopbarProps> = ({ onSubmit }) => {
   const { username } = useSelector((state: RootState) => state.username);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -58,7 +59,12 @@ export const Topbar: React.FC<any> = ({ onSubmit }) => {
           />
           <Button>Submit</Button>
         </StyledFormWrapper>
-        <Button onClick={() => history.push('/favorites')}>Favorites</Button>
+        <Button
+          className="favorites-btn"
+          onClick={() => history.push('/favorites')}
+        >
+          Favorites
+        </Button>
       </StyledTopbarWrapper>
     </StyledTopbar>
   );

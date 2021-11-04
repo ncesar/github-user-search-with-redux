@@ -1,4 +1,3 @@
-export type HomepageProps = any;
 export type UserProps = {
   login: string;
   avatar_url: string;

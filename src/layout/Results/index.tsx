@@ -5,13 +5,14 @@ import { Content } from 'components/Content';
 import { Person } from 'components/Person';
 import { Topbar } from 'components/Topbar';
 import { getUsers } from 'services/http';
-import { UserProps } from 'layout/Homepage/types';
+import type { UserProps } from 'layout/Results/types';
 import { changeName } from 'redux/username';
 import { updateFavorites } from 'redux/favorites';
 
 export const Results = () => {
   const dispatch = useDispatch();
   const { username } = useSelector((state: RootState) => state.username);
+  const { favorites } = useSelector((state: RootState) => state.favorites);
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -82,6 +83,7 @@ export const Results = () => {
             index: number,
           ) => (
             <Person
+              favorites={favorites}
               key={id}
               name={name}
               photo={photo}

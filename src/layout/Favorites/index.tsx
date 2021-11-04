@@ -24,6 +24,7 @@ export const Favorites = () => {
         {favorites.map(
           ({ name, photo, url, type, id }: FavoriteProps, index: number) => (
             <Person
+              favorites={favorites}
               key={id}
               name={name}
               photo={photo}

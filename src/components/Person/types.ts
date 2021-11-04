@@ -5,4 +5,5 @@ export type PersonProps = {
   url: string;
   onAddFavoritesClick: React.MouseEventHandler<any>;
   selectedPerson: object;
+  favorites: any;
 };

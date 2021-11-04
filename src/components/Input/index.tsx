@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledInput, StyledInputWrapper } from './styled';
 import { CloseOutline as ClearIcon } from '@styled-icons/evaicons-outline/CloseOutline';
+import { StyledInput, StyledInputWrapper } from './styled';
 import type { InputProps } from './types';
 
 export const Input: React.FC<InputProps> = ({

@@ -12,11 +12,11 @@ export const StyledTitleWrapper = styled.div`
 `;
 export const StyledContentTitle = styled.h1`
   font-weight: bold;
-  color: #333333;
+  color: ${({ theme }) => theme.darkGrey};
   text-align: center;
   font-size: 48px;
   overflow: hidden;
-  border-right: 0.15em solid #333333;
+  border-right: 0.15em solid ${({ theme }) => theme.darkGrey};
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.15em;
@@ -37,7 +37,7 @@ export const StyledContentTitle = styled.h1`
       border-color: transparent;
     }
     50% {
-      border-color: #333333;
+      border-color: ${({ theme }) => theme.darkGrey};
     }
   }
 `;
@@ -54,7 +54,7 @@ export const StyledContentTitleWrapper = styled.span`
 export const StyledChildrenWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 export const StyledButtonsWrapper = styled.div`
   display: flex;
@@ -63,7 +63,7 @@ export const StyledButtonsWrapper = styled.div`
 `;
 export const StyledButton = styled.button`
   margin-right: 10px;
-  border: 1px solid #d7cfcf;
+  border: 1px solid ${({ theme }) => theme.lightGrey};
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
@@ -74,5 +74,5 @@ export const StyledButton = styled.button`
 `;
 export const StyledNoItems = styled.h3`
   margin-top: 10px;
-  color: #da3f3f;
+  color: ${({ theme }) => theme.red};
 `;

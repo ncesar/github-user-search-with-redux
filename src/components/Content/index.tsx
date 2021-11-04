@@ -1,5 +1,5 @@
-import { Loading } from 'components/Loading';
 import { useDispatch } from 'react-redux';
+import { Loading } from 'components/Loading';
 import { resetFavorites } from 'redux/favorites';
 import {
   StyledButton,

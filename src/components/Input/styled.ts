@@ -40,4 +40,7 @@ export const StyledInput = styled.input`
     /* Firefox 18- */
     font-family: 'Poppins', 'sans-serif';
   }
+  @media (max-width: 768px) {
+    width: 200px;
+  }
 `;
