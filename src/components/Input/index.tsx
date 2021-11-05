@@ -4,11 +4,11 @@ import { StyledInput, StyledInputWrapper } from './styled';
 import type { InputProps } from './types';
 
 export const Input: React.FC<InputProps> = ({
-  placeholder,
+  error,
   onChange,
   onClearClick,
+  placeholder,
   value,
-  error,
 }) => {
   return (
     <StyledInputWrapper error={error}>

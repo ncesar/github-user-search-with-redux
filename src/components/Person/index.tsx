@@ -14,14 +14,14 @@ import type { PersonProps } from './types';
 import { favoriteCheckHandler } from 'redux/favorites';
 
 export const Person: React.FC<PersonProps> = ({
-  photo,
+  favorites,
+  id,
   name,
+  onAddFavoritesClick,
+  photo,
+  selectedPerson,
   type,
   url,
-  onAddFavoritesClick,
-  selectedPerson,
-  id,
-  favorites,
 }) => {
   const favoriteCheck = () => {
     if (favoriteCheckHandler(favorites, selectedPerson)) {

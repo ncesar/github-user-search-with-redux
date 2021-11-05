@@ -17,15 +17,15 @@ import React, { Fragment } from 'react';
 
 export const Content: React.FC<ContentProps> = ({
   children,
-  hideTitle = false,
-  onPreviousClick,
-  onNextClick,
-  pageNum,
-  numOfUsers,
   error,
-  loading,
-  hideButtons = false,
   favorites = 0,
+  hideButtons = false,
+  hideTitle = false,
+  loading,
+  numOfUsers,
+  onNextClick,
+  onPreviousClick,
+  pageNum,
   returnSortType,
   title = '<Person />',
 }) => {

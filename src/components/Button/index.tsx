@@ -3,8 +3,8 @@ import type { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  onClick,
   className,
+  onClick,
 }) => {
   return (
     <StyledButton onClick={onClick} className={className}>
