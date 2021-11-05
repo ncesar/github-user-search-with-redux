@@ -8,6 +8,10 @@
 6. Mobile responsive;
 7. and much more 😀
 
+# Documentation
+
+This project has documentation available. Take a look on: https://ncesar.github.io/github-user-search/
+
 # How to run
 
 1. Install the project dependencies using `npm i` or `yarn add`
