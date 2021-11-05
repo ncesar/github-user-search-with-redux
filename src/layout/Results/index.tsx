@@ -40,7 +40,9 @@ export const Results = () => {
         } catch (error) {
           setError(true);
         } finally {
-          setLoading(false);
+          setTimeout(() => {
+            setLoading(false);
+          }, 500);
         }
       }
     },
