@@ -9,6 +9,7 @@ import type { UserProps } from 'layout/Results/types';
 import { changeName } from 'redux/username';
 import { updateFavorites } from 'redux/favorites';
 import { usePrevious } from 'components/hooks/usePrevious';
+import { MotionWrapper } from 'components/MotionWrapper';
 
 export const Results = () => {
   const dispatch = useDispatch();
@@ -92,45 +93,47 @@ export const Results = () => {
   }, [prevSort, sortType, sortData]);
 
   return (
-    <React.Fragment>
-      <Topbar onSubmit={() => setPage(1)} />
-      <Content
-        hideTitle={checkForExistingData}
-        onPreviousClick={decrementPageNum}
-        onNextClick={incrementPageNum}
-        pageNum={page}
-        numOfUsers={data.length}
-        error={error}
-        loading={loading}
-        returnSortType={(selectedSort: string) => setSortType(selectedSort)}
-      >
-        {data.map(
-          (
-            {
-              login: name,
-              avatar_url: photo,
-              html_url: url,
-              type,
-              id,
-            }: UserProps,
-            index: number,
-          ) => (
-            <Person
-              favorites={favorites}
-              key={id}
-              name={name}
-              photo={photo}
-              url={url}
-              type={type}
-              id={id}
-              selectedPerson={{ name: name }}
-              onAddFavoritesClick={() => {
-                dispatch(updateFavorites(data[index]));
-              }}
-            />
-          ),
-        )}
-      </Content>
-    </React.Fragment>
+    <MotionWrapper>
+      <React.Fragment>
+        <Topbar onSubmit={() => setPage(1)} />
+        <Content
+          hideTitle={checkForExistingData}
+          onPreviousClick={decrementPageNum}
+          onNextClick={incrementPageNum}
+          pageNum={page}
+          numOfUsers={data.length}
+          error={error}
+          loading={loading}
+          returnSortType={(selectedSort: string) => setSortType(selectedSort)}
+        >
+          {data.map(
+            (
+              {
+                login: name,
+                avatar_url: photo,
+                html_url: url,
+                type,
+                id,
+              }: UserProps,
+              index: number,
+            ) => (
+              <Person
+                favorites={favorites}
+                key={id}
+                name={name}
+                photo={photo}
+                url={url}
+                type={type}
+                id={id}
+                selectedPerson={{ name: name }}
+                onAddFavoritesClick={() => {
+                  dispatch(updateFavorites(data[index]));
+                }}
+              />
+            ),
+          )}
+        </Content>
+      </React.Fragment>
+    </MotionWrapper>
   );
 };
