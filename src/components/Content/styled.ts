@@ -9,6 +9,12 @@ export const StyledContentWrapper = styled.main`
 `;
 export const StyledTitleWrapper = styled.div`
   width: 425px;
+  @media (max-width: 424px) {
+    width: 90%;
+    h1 {
+      font-size: 36px;
+    }
+  }
 `;
 export const StyledContentTitle = styled.h1`
   font-weight: bold;
