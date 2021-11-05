@@ -5,11 +5,11 @@ import { MotionWrapper } from 'components/MotionWrapper';
 
 export const Homepage: React.FC = () => {
   return (
-    <MotionWrapper>
-      <React.Fragment>
-        <Topbar />
+    <React.Fragment>
+      <Topbar />
+      <MotionWrapper>
         <Content hideTitle={false} />
-      </React.Fragment>
-    </MotionWrapper>
+      </MotionWrapper>
+    </React.Fragment>
   );
 };

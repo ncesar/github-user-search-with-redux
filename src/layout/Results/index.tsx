@@ -93,9 +93,9 @@ export const Results = () => {
   }, [prevSort, sortType, sortData]);
 
   return (
-    <MotionWrapper>
-      <React.Fragment>
-        <Topbar onSubmit={() => setPage(1)} />
+    <React.Fragment>
+      <Topbar onSubmit={() => setPage(1)} />
+      <MotionWrapper>
         <Content
           hideTitle={checkForExistingData}
           onPreviousClick={decrementPageNum}
@@ -133,7 +133,7 @@ export const Results = () => {
             ),
           )}
         </Content>
-      </React.Fragment>
-    </MotionWrapper>
+      </MotionWrapper>
+    </React.Fragment>
   );
 };

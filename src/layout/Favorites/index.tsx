@@ -14,9 +14,9 @@ export const Favorites = () => {
   const { favorites } = useSelector((state: RootState) => state.favorites);
   const checkForExistingData = favorites.length > 0 && true;
   return (
-    <MotionWrapper>
-      <React.Fragment>
-        <Topbar />
+    <React.Fragment>
+      <Topbar />
+      <MotionWrapper>
         <Content
           hideTitle={checkForExistingData}
           hideButtons
@@ -41,7 +41,7 @@ export const Favorites = () => {
             ),
           )}
         </Content>
-      </React.Fragment>
-    </MotionWrapper>
+      </MotionWrapper>
+    </React.Fragment>
   );
 };
