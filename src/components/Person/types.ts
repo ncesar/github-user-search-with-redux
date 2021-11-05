@@ -6,4 +6,5 @@ export type PersonProps = {
   onAddFavoritesClick: React.MouseEventHandler<any>;
   selectedPerson: object;
   favorites: any;
+  id: number;
 };

@@ -66,6 +66,7 @@ export const StyledButtonsWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  align-items: center;
 `;
 export const StyledButton = styled.button`
   margin-right: 10px;
@@ -81,4 +82,17 @@ export const StyledButton = styled.button`
 export const StyledNoItems = styled.h3`
   margin-top: 10px;
   color: ${({ theme }) => theme.red};
+`;
+export const StyledFilterWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  p {
+    margin-right: 5px;
+  }
+  select {
+    border-radius: 5px;
+    border: 1px solid #a6a6a6;
+    padding: 5px;
+  }
 `;

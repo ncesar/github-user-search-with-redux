@@ -30,6 +30,7 @@ export const Favorites = () => {
               photo={photo}
               url={url}
               type={type}
+              id={id}
               selectedPerson={favorites[index]}
               onAddFavoritesClick={() => {
                 dispatch(updateFavorites(favorites[index]));

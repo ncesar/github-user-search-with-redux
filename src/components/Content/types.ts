@@ -3,6 +3,7 @@ export type ContentProps = {
   hideTitle?: boolean;
   onPreviousClick?: React.MouseEventHandler<HTMLButtonElement>;
   onNextClick?: React.MouseEventHandler<HTMLButtonElement>;
+  returnSortType?: any;
   pageNum?: number;
   numOfUsers?: number;
   error?: boolean;

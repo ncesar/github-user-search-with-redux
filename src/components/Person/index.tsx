@@ -20,6 +20,7 @@ export const Person: React.FC<PersonProps> = ({
   url,
   onAddFavoritesClick,
   selectedPerson,
+  id,
   favorites,
 }) => {
   const favoriteCheck = () => {
@@ -46,6 +47,10 @@ export const Person: React.FC<PersonProps> = ({
       <StyledPersonDataWrapper>
         <StyledPersonPrimaryTitle>Type:</StyledPersonPrimaryTitle>
         <StyledPersonSecondaryTitle>{type}</StyledPersonSecondaryTitle>
+      </StyledPersonDataWrapper>
+      <StyledPersonDataWrapper>
+        <StyledPersonPrimaryTitle>ID:</StyledPersonPrimaryTitle>
+        <StyledPersonSecondaryTitle>{id}</StyledPersonSecondaryTitle>
       </StyledPersonDataWrapper>
     </StyledPersonWrapper>
   );
